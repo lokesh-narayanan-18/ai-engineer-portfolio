@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 
 export function SiteFooter() {
   return (
@@ -29,7 +29,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/60">
         <p className="mx-auto max-w-6xl px-6 py-4 text-[11px] text-ink-muted">
-          © {new Date().getFullYear()} Lokesh L. Built with React, Three.js & TanStack Start.
+          © {new Date().getFullYear()} Lokesh L. Built with React, Vite & Three.js.
         </p>
       </div>
     </footer>

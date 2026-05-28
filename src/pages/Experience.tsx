@@ -1,23 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-export const Route = createFileRoute("/experience")({
-  head: () => ({
-    meta: [
-      { title: "Experience — Lokesh L" },
-      {
-        name: "description",
-        content:
-          "Professional experience of Lokesh L — AI Engineer at Tata Consultancy Services and AI/ML Developer Intern at OEConnection.",
-      },
-      { property: "og:title", content: "Experience — Lokesh L" },
-      {
-        property: "og:description",
-        content: "AI Engineer at TCS and former AI/ML intern at OEConnection.",
-      },
-    ],
-  }),
-  component: Experience,
-});
+import { Helmet } from "react-helmet-async";
 
 const roles = [
   {
@@ -53,12 +34,14 @@ const roles = [
   },
 ];
 
-function Experience() {
+export default function Experience() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-20 md:py-28">
-      <p className="text-xs font-medium uppercase tracking-[0.18em] text-ink-muted">
-        Experience
-      </p>
+      <Helmet>
+        <title>Experience — Lokesh L</title>
+        <meta name="description" content="Professional experience of Lokesh L — AI Engineer at Tata Consultancy Services and AI/ML Developer Intern at OEConnection." />
+      </Helmet>
+      <p className="text-xs font-medium uppercase tracking-[0.18em] text-ink-muted">Experience</p>
       <h1 className="mt-3 font-display text-5xl font-bold tracking-tight text-ink md:text-6xl">
         Where I've worked<span className="text-brand">.</span>
       </h1>
@@ -68,9 +51,7 @@ function Experience() {
           <li key={r.company} className="relative border-l border-border pl-8">
             <span className="absolute -left-[7px] top-1.5 h-3 w-3 rounded-full border-2 border-background bg-brand" />
             <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <h2 className="font-display text-2xl font-bold tracking-tight text-ink">
-                {r.role}
-              </h2>
+              <h2 className="font-display text-2xl font-bold tracking-tight text-ink">{r.role}</h2>
               <span className="text-sm text-ink-muted">{r.period}</span>
             </div>
             <p className="mt-1 text-sm text-ink">
@@ -88,12 +69,7 @@ function Experience() {
 
             <ul className="mt-5 flex flex-wrap gap-1.5">
               {r.stack.map((t) => (
-                <li
-                  key={t}
-                  className="rounded-md border border-border bg-surface px-2 py-0.5 text-[11px] text-ink"
-                >
-                  {t}
-                </li>
+                <li key={t} className="rounded-md border border-border bg-surface px-2 py-0.5 text-[11px] text-ink">{t}</li>
               ))}
             </ul>
           </li>
