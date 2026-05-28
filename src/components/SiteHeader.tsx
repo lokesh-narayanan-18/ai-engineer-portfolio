@@ -1,14 +1,14 @@
-import { Link } from "@tanstack/react-router";
+import { NavLink, Link } from "react-router-dom";
 import { Download, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const links = [
-  { to: "/", label: "Home" },
+  { to: "/", label: "Home", end: true },
   { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
   { to: "/experience", label: "Experience" },
   { to: "/contact", label: "Contact" },
-] as const;
+];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -26,15 +26,18 @@ export function SiteHeader() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
-            <Link
+            <NavLink
               key={l.to}
               to={l.to}
-              className="text-sm text-ink-muted transition-colors hover:text-ink"
-              activeOptions={{ exact: l.to === "/" }}
-              activeProps={{ className: "text-ink font-medium" }}
+              end={l.end}
+              className={({ isActive }) =>
+                `text-sm transition-colors hover:text-ink ${
+                  isActive ? "text-ink font-medium" : "text-ink-muted"
+                }`
+              }
             >
               {l.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
 
@@ -62,16 +65,19 @@ export function SiteHeader() {
         <div className="border-t border-border/60 bg-background md:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4">
             {links.map((l) => (
-              <Link
+              <NavLink
                 key={l.to}
                 to={l.to}
+                end={l.end}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-2 text-sm text-ink-muted hover:bg-surface hover:text-ink"
-                activeOptions={{ exact: l.to === "/" }}
-                activeProps={{ className: "text-ink font-medium bg-surface" }}
+                className={({ isActive }) =>
+                  `rounded-md px-2 py-2 text-sm hover:bg-surface hover:text-ink ${
+                    isActive ? "text-ink font-medium bg-surface" : "text-ink-muted"
+                  }`
+                }
               >
                 {l.label}
-              </Link>
+              </NavLink>
             ))}
             <a
               href="/Lokesh_L_Resume.pdf"
