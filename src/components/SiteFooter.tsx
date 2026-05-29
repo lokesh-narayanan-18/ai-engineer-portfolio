@@ -16,10 +16,10 @@ export function SiteFooter() {
           <a href="mailto:lokesh.mass@outlook.com" className="hover:text-ink">
             lokesh.mass@outlook.com
           </a>
-          <a href="https://github.com/" target="_blank" rel="noreferrer" className="hover:text-ink">
+          <a href="https://github.com/lokesh-narayanan-18" target="_blank" rel="noreferrer" className="hover:text-ink">
             GitHub
           </a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="hover:text-ink">
+          <a href="https://www.linkedin.com/in/lokesh-l-4392931a5/" target="_blank" rel="noreferrer" className="hover:text-ink">
             LinkedIn
           </a>
           <Link to="/contact" className="hover:text-ink">

@@ -72,8 +72,8 @@ export default function Home() {
             <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-ink-muted">
               <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4" /> Bengaluru, India</span>
               <a className="inline-flex items-center gap-2 hover:text-ink" href="mailto:lokesh.mass@outlook.com"><Mail className="h-4 w-4" /> Email</a>
-              <a className="inline-flex items-center gap-2 hover:text-ink" href="https://github.com/" target="_blank" rel="noreferrer"><Github className="h-4 w-4" /> GitHub</a>
-              <a className="inline-flex items-center gap-2 hover:text-ink" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><Linkedin className="h-4 w-4" /> LinkedIn</a>
+              <a className="inline-flex items-center gap-2 hover:text-ink" href="https://github.com/lokesh-narayanan-18" target="_blank" rel="noreferrer"><Github className="h-4 w-4" /> GitHub</a>
+              <a className="inline-flex items-center gap-2 hover:text-ink" href="https://www.linkedin.com/in/lokesh-l-4392931a5/" target="_blank" rel="noreferrer"><Linkedin className="h-4 w-4" /> LinkedIn</a>
             </div>
           </div>
         </div>
