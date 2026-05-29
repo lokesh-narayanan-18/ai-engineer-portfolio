@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Download, Mail, MapPin, Github, Linkedin } from "lucide-react";
 import { HeroCanvas } from "@/components/HeroCanvas";
-
+import Resume from "@/Assets/Lokesh L - Resume.pdf";
 const stats = [
   { value: "2+ yrs", label: "at TCS" },
   { value: "~25%", label: "retrieval accuracy gain" },
@@ -60,7 +60,7 @@ export default function Home() {
               <Link to="/projects" className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
                 View projects <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="/Lokesh_L_Resume.pdf" download className="inline-flex items-center gap-2 rounded-md border border-input bg-background px-5 py-3 text-sm font-medium text-ink transition-colors hover:bg-surface">
+              <a href={Resume} download className="inline-flex items-center gap-2 rounded-md border border-input bg-background px-5 py-3 text-sm font-medium text-ink transition-colors hover:bg-surface">
                 <Download className="h-4 w-4" />
                 Download résumé
               </a>

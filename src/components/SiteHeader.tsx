@@ -1,7 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import { Download, Menu, X } from "lucide-react";
 import { useState } from "react";
-
+import Resume from "@/Assets/Lokesh L - Resume.pdf";
 const links = [
   { to: "/", label: "Home", end: true },
   { to: "/about", label: "About" },
@@ -43,7 +43,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <a
-            href="/Lokesh_L_Resume.pdf"
+            href={Resume}
             download
             className="hidden items-center gap-2 rounded-md bg-primary px-3.5 py-2 text-xs font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-flex"
           >
